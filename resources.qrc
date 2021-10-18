@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/characters">
+        <file>resources/images/characters/warriorDwarf.jpg</file>
+        <file>resources/images/characters/warriorElf.jpg</file>
+        <file>resources/images/characters/warriorHuman.jpg</file>
+        <file>resources/images/characters/rogueDwarf.jpg</file>
+        <file>resources/images/characters/rogueElf.jpg</file>
+        <file>resources/images/characters/rogueHuman.png</file>
+        <file>resources/images/characters/mageDwarf.jpg</file>
+        <file>resources/images/characters/mageElf.png</file>
+        <file>resources/images/characters/mageHuman.png</file>
+        <file>resources/images/characters/priestDwarf.jpg</file>
+        <file>resources/images/characters/priestElf.png</file>
+        <file>resources/images/characters/priestHuman.png</file>
+    </qresource>
+    <qresource prefix="/backgrounds">
+        <file>resources/images/backgrounds/specsBackground.png</file>
+        <file>resources/images/backgrounds/filler.jpg</file>
+    </qresource>
+</RCC>
