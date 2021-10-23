@@ -2,6 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include <QLineEdit>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -24,19 +25,35 @@ private slots:
 
     void skillCounter();
 
-/*  void on_constitutionCount_editingFinished();
-
-    void on_streightCount_editingFinished();
-
-    void on_dexterityCount_editingFinished();
-
-    void on_wisdomCount_editingFinished();
-
-    void on_intelligenceCount_editingFinished();
-
-    void on_charismaCount_editingFinished();
-*/
     void on_skillButton_clicked();
+
+    void oneCounter(QLineEdit *edit, bool operand);
+
+    void on_constitutionPlusButton_clicked();
+
+
+
+    void on_strengthPlusButton_clicked();
+
+    void on_dexterityPlusButton_clicked();
+
+    void on_wisdomPlusButton_clicked();
+
+    void on_intelligencePlusButton_clicked();
+
+    void on_charismaPlusButton_clicked();
+
+    void on_constitutionMinusButton_clicked();
+
+    void on_strengthMinusButton_clicked();
+
+    void on_dexterityMinusLabel_clicked();
+
+    void on_wisdomMinusButton_clicked();
+
+    void on_intelligenceMinusButton_clicked();
+
+    void on_charismaMinusButton_clicked();
 
 private:
     Ui::Widget *ui;
