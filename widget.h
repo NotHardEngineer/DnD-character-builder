@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QLineEdit>
+#include <QLabel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -25,34 +26,25 @@ private slots:
 
     void skillCounter();
 
-    void on_skillButton_clicked();
-
     void oneCounter(QLineEdit *edit, bool operand);
 
+    bool getValueFromLineEdit(QLineEdit *line, int &value);
+
+    bool bonusShow(QLabel *bonusLabel, int bonusArg, int bonusState, int bonus);
+    void noBonusShow(QLabel *bonusLabel);
+    void totalShow(int base, QLabel *bonus, QLabel *total);
+
     void on_constitutionPlusButton_clicked();
-
-
-
     void on_strengthPlusButton_clicked();
-
     void on_dexterityPlusButton_clicked();
-
     void on_wisdomPlusButton_clicked();
-
     void on_intelligencePlusButton_clicked();
-
     void on_charismaPlusButton_clicked();
-
     void on_constitutionMinusButton_clicked();
-
     void on_strengthMinusButton_clicked();
-
     void on_dexterityMinusLabel_clicked();
-
     void on_wisdomMinusButton_clicked();
-
     void on_intelligenceMinusButton_clicked();
-
     void on_charismaMinusButton_clicked();
 
 private:
