@@ -19,15 +19,21 @@ public:
 
 private slots:
     void on_raceChoose_currentIndexChanged(int index);
+    void on_classChoose_currentIndexChanged(int index);
+    void on_storyChoose_currentIndexChanged(int index);
 
     void characterImageSet(int raseIndex, int classIndex);
 
-    void on_classChoose_currentIndexChanged(int index);
+    void constitutionPointsCount();
+    void dexterityPointsCount();
+    void wisdomPointsCount();
+    void intelligencePointsCount();
+    void charismaPointsCount();
+    void pointsCounter();
 
-    void skillCounter();
+    void HPCount();
 
     void oneCounter(QLineEdit *edit, bool operand);
-
     bool getValueFromLineEdit(QLineEdit *line, int &value);
 
     bool bonusShow(QLabel *bonusLabel, int bonusArg, int bonusState, int bonus);
