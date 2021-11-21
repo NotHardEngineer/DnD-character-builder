@@ -108,22 +108,22 @@ void Widget::oneCounter(QLineEdit *edit, bool operand){
                 ui->debugLabel->setText("хар-ка не может быть больше 15");
             }
         }
-   ui->skillpointCount->setPalette(pal);
+        ui->skillpointCount->setPalette(pal);
     }
     else if (ok && pointLeft == 0 && operand == 0){
-            if(prime > 8 && prime <= 13){
-                edit->setText(QString::number(prime - 1));
-                ui->skillpointCount->setText(QString::number(pointLeft + 1));
-            }
-            else if(prime > 13){
-                edit->setText(QString::number(prime - 1));
-                ui->skillpointCount->setText(QString::number(pointLeft + 2));
-            }
-            else{
-                ui->debugLabel->setText("хар-ка не может быть меньше 8");
-            }
-           ui->skillpointCount->setPalette(pal);
+        if(prime > 8 && prime <= 13){
+            edit->setText(QString::number(prime - 1));
+            ui->skillpointCount->setText(QString::number(pointLeft + 1));
         }
+        else if(prime > 13){
+            edit->setText(QString::number(prime - 1));
+            ui->skillpointCount->setText(QString::number(pointLeft + 2));
+        }
+        else{
+            ui->debugLabel->setText("хар-ка не может быть меньше 8");
+        }
+        ui->skillpointCount->setPalette(pal);
+    }
     else if (ok && pointLeft == 0) {
         QPalette pal;
         pal.setColor(QPalette::Base, Qt::red);
@@ -212,6 +212,12 @@ void Widget::constitutionPointsCount(){
     else{
         ui->debugLabel->setText("unknow error");
     }
+    if(constitutionPoints % 2 == 0){
+        ui->healthPoints->setText(QString::number(constitutionPoints/2 + 3));
+    }
+    else{
+        ui->healthPoints->setText(QString::number((constitutionPoints - 1)/2 + 3));
+    }
 }
 void Widget::dexterityPointsCount(){
     bool ok = 1;
@@ -239,7 +245,9 @@ void Widget::dexterityPointsCount(){
         //подсчет скрытности
         noBonusShow(ui->stealthBonus);
         totalShow(ui->dexterityTotal->text().toInt(), ui->stealthBonus, ui->stealthTotal);
+        ui->speedPoints->setText(QString::number(dexterityPoints * 2));
     }
+
     else{
         ui->debugLabel->setText("unknow error");
     }
@@ -398,6 +406,13 @@ void Widget::pointsCounter(){
         }
         totalShow(ui->strengthTotal->text().toInt(), ui->athleticsBonus, ui->athleticsTotal);
 
+        if(constitutionPoints % 2 == 0){
+            ui->healthPoints->setText(QString::number(constitutionPoints/2 + 3));
+        }
+        else{
+            ui->healthPoints->setText(QString::number((constitutionPoints - 1)/2 + 3));
+        }
+
         //подсчет ловкости
         if(!bonusShow(ui->dexterityBonus, raceIndex, 0, 1)){
             if(!bonusShow(ui->dexterityBonus, raceIndex, 1, 2)){
@@ -418,6 +433,8 @@ void Widget::pointsCounter(){
         //подсчет бонуса скрытности
         noBonusShow(ui->stealthBonus);
         totalShow(ui->dexterityTotal->text().toInt(), ui->stealthBonus, ui->stealthTotal);
+
+        ui->speedPoints->setText(QString::number(dexterityPoints * 2));
 
         //подсчет бонуса мудрости
         if(!bonusShow(ui->wisdomBonus, raceIndex, 1, 2)){

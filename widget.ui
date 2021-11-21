@@ -450,7 +450,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>debug</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="constitutionPlusButton">
@@ -612,7 +612,7 @@
   <widget class="QLabel" name="constitutionBonus">
    <property name="geometry">
     <rect>
-     <x>209</x>
+     <x>214</x>
      <y>154</y>
      <width>30</width>
      <height>16</height>
@@ -625,7 +625,7 @@
   <widget class="QLabel" name="strengthBonus">
    <property name="geometry">
     <rect>
-     <x>209</x>
+     <x>214</x>
      <y>219</y>
      <width>30</width>
      <height>16</height>
@@ -638,7 +638,7 @@
   <widget class="QLabel" name="dexterityBonus">
    <property name="geometry">
     <rect>
-     <x>209</x>
+     <x>214</x>
      <y>280</y>
      <width>30</width>
      <height>16</height>
@@ -651,7 +651,7 @@
   <widget class="QLabel" name="wisdomBonus">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>214</x>
      <y>430</y>
      <width>30</width>
      <height>16</height>
@@ -664,7 +664,7 @@
   <widget class="QLabel" name="intelligenceBonus">
    <property name="geometry">
     <rect>
-     <x>209</x>
+     <x>214</x>
      <y>594</y>
      <width>30</width>
      <height>16</height>
@@ -677,7 +677,7 @@
   <widget class="QLabel" name="charismaBonus">
    <property name="geometry">
     <rect>
-     <x>209</x>
+     <x>214</x>
      <y>734</y>
      <width>30</width>
      <height>16</height>
@@ -768,7 +768,7 @@
   <widget class="QLabel" name="bonusLabel">
    <property name="geometry">
     <rect>
-     <x>209</x>
+     <x>214</x>
      <y>125</y>
      <width>30</width>
      <height>16</height>
@@ -1207,6 +1207,68 @@
     <string>Tot</string>
    </property>
   </widget>
+  <widget class="QWidget" name="layoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>710</y>
+     <width>171</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="speedLayout">
+    <item>
+     <widget class="QLabel" name="speedLabel">
+      <property name="text">
+       <string>Скорость (ft/ход) :</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="speedPoints"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>710</y>
+     <width>121</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="healthLayout">
+    <item>
+     <widget class="QLabel" name="healthLabel">
+      <property name="text">
+       <string>Здоровье:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="healthPoints"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>115</y>
+     <width>481</width>
+     <height>701</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="resources.qrc">:/backgrounds/resources/images/backgrounds/specsBackground.png</pixmap>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>layoutWidget</zorder>
   <zorder>layoutWidget</zorder>
   <zorder>characterImagePlace</zorder>
   <zorder>layoutWidget</zorder>
@@ -1252,6 +1314,7 @@
   <zorder>totalLabel</zorder>
   <zorder>bonusLabel_2</zorder>
   <zorder>totalLabel_2</zorder>
+  <zorder>layoutWidget_2</zorder>
  </widget>
  <resources>
   <include location="resources.qrc"/>
