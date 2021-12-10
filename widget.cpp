@@ -7,6 +7,7 @@ Widget::Widget(QWidget *parent)
 {
     ui->setupUi(this);
     characterImageSet(ui->raceChoose->currentIndex(), ui->raceChoose->currentIndex());
+    ui->debugLabel->setStyleSheet("QLabel { color : red;}");
     pointsCounter();
 
 }
@@ -106,6 +107,7 @@ void Widget::oneCounter(QLineEdit *edit, bool operand){
             }
             else{
                 ui->debugLabel->setText("хар-ка не может быть больше 15");
+
             }
         }
         ui->skillpointCount->setPalette(pal);
