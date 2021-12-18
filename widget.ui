@@ -1116,7 +1116,7 @@
     <pixmap resource="resources.qrc">:/backgrounds/resources/images/backgrounds/specsBackground.png</pixmap>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -1170,6 +1170,37 @@
      </widget>
     </item>
     <item>
+     <widget class="QComboBox" name="classChoose">
+      <item>
+       <property name="text">
+        <string>Воин</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Разбойник</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Маг</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Жрец</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="storyLabel">
+      <property name="text">
+       <string>Предистория:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QComboBox" name="storyChoose">
       <property name="inputMethodHints">
        <set>Qt::ImhNone</set>
@@ -1192,37 +1223,6 @@
       <item>
        <property name="text">
         <string>Отшельник</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="storyLabel">
-      <property name="text">
-       <string>Предистория:</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QComboBox" name="classChoose">
-      <item>
-       <property name="text">
-        <string>Воин</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Разбойник</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Маг</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Жрец</string>
        </property>
       </item>
      </widget>
